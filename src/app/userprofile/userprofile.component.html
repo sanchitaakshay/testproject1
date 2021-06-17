@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<h1>Send Data from Parent to Child component</h1>
+<!-- <app-home [details]="detailsList" (addDetails)="newDetails($event)"></app-home> -->
+<table class="table table-dark">
+<thead>
+    <tr>
+        <th>Image</th>
+        <th>Full Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>State</th>
+        <th>Age</th>
+        <th>Country</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr *ngFor="let d of childDetails">
+            
+            <td>{{d.firstname}}</td>
+            <td>{{d.address}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.password}}</td>
+            <td>{{d.state}}</td>
+            <td>{{d.country}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.country}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" (click)="PassEvent()">Pass Parent to Child Component</button>
